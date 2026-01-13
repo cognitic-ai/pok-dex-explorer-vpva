@@ -35,8 +35,8 @@ export default function Layout() {
           <WebTabs.Screen
             name="(index)"
             options={{
-              title: "Home",
-              tabBarIcon: (props) => <MaterialIcons {...props} name="home" />,
+              title: "Pokédex",
+              tabBarIcon: (props) => <MaterialIcons {...props} name="catching-pokemon" />,
             }}
           />
           <WebTabs.Screen
@@ -50,12 +50,12 @@ export default function Layout() {
       ) : (
         <NativeTabs>
           <NativeTabs.Trigger name="(index)">
-            <Label>Home</Label>
+            <Label>Pokédex</Label>
             <Icon
               {...Platform.select({
-                ios: { sf: { default: "house", selected: "house.fill" } },
+                ios: { sf: { default: "circle.grid.3x3", selected: "circle.grid.3x3.fill" } },
                 default: {
-                  src: <VectorIcon family={MaterialIcons} name="home" />,
+                  src: <VectorIcon family={MaterialIcons} name="catching-pokemon" />,
                 },
               })}
             />
